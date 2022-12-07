@@ -62,7 +62,8 @@ public class ClientController {
             return new ResponseEntity<>(HttpStatus.CREATED);
         }
         catch (Exception e){
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+
+            throw new InternalException("Internal Server Error");
         }
     }
 
